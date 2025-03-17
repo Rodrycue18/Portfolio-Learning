@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+/* variables css con root modificamos todo el proyecto */
+:root{
+    --color-primario: black;
+    --color-secundario:#f6f6f6;
+    --color-terciario:#22D4FD;
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+*{
+    /* con el asterisco puedo modificar de manera universal */
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--color-primario);
+    color: white;
+    /* height: 100vh; */
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+
+}
+.header_menu{
+    display:flex;
+    gap: 80px;
+}
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+strong{
+    color:#22D4FD;
+    /* border: 1px solid #22D4FD; */
+    padding: 10px;
+}
+/* con class usamos las clases de html para especificar  */
+.titulo-destaque{ 
+    color: blueviolet;
+
+}
+/* .presentacion{
+    display: flex;
+    align-items: center;
+ -   margin: 4%;
+    justify-content: space-between;
+} */
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 15%;
+    gap: 82px;
+  }
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.presentacion_contenido_titulo{
+    font-size: 36px;
+    font-family:"Krona One", sans-serif;
+}
+.presentacion_contenido_texto{
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.buttons{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+.presentacion_enlace_subtitulo{
+    font-family: "Krona One",sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
+}
+.link_buttons{
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    padding: 21.5px 0;  /* el primer es el padding vertical , el segundo es el horizontal */
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    border: 2px solid #22D4FD;/* Con esto hacemos que el borde tenga color */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/* hover  */
+.link_buttons:hover{
+    background-color: #272727;
+    /* padding: 50px; */
+    cursor: pointer;    
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+footer{
+    background-color: #22D4FD;
+    padding: 24px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+@media(max-width:1200px){
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        width: auto;
+    }
+}
